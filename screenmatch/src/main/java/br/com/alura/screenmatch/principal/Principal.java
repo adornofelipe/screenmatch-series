@@ -81,19 +81,19 @@ public class Principal {
 
         episodios.forEach(System.out::println);
 
-//        System.out.println("Digite um trecho do nome do titulo do episodio");
-//        var trechoTitulo = leitor.nextLine();
-//        Optional<Episodio> episodioBuscado = episodios.stream()
-//                .filter(e -> e.getTitulo().toUpperCase().contains(trechoTitulo.toUpperCase()))
-//                .findFirst();
-//
-//        if (episodioBuscado.isPresent()){
-//            System.out.println("Episodio Encontrado! ");
-//            System.out.println("Temporada: " + episodioBuscado.get());
-//        }else
-//        {
-//            System.out.println("Episodio não encontrado! ");
-//        }
+        System.out.println("Digite um trecho do nome do titulo do episodio");
+        var trechoTitulo = leitor.nextLine();
+        Optional<Episodio> episodioBuscado = episodios.stream()
+                .filter(e -> e.getTitulo().toUpperCase().contains(trechoTitulo.toUpperCase()))
+                .findFirst();
+
+        if (episodioBuscado.isPresent()){
+            System.out.println("Episodio Encontrado! ");
+            System.out.println("Temporada: " + episodioBuscado.get());
+        }else
+        {
+            System.out.println("Episodio não encontrado! ");
+        }
 //
 //        System.out.println("A Partir de que ano voce deseja ver os episodios");
 //        var ano = leitor.nextInt();
